@@ -71,7 +71,7 @@ class Conta9 {
 
 }
 
-class ContaPoupanca extends Conta9 {
+export class ContaPoupanca extends Conta9 {
     constructor(numero: string, valor: number) {
         super(numero, valor);
     }
@@ -200,3 +200,4 @@ b7.inserir(new Conta9('222', 100));
 console.log(b7.consultar('222'));
 
 
+export {Banco7, Conta9, AplicacaoError5, SaldoInsuficienteError5, ValorInvalidoError3, ContaInexistenteError5, PoupancaInvalidaError}

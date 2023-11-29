@@ -1,30 +1,37 @@
 "use strict";
 //13) Crie uma validação para não cadastrar mais de uma conta com o mesmo número. Para isso, chame o método consultar no método inserir da classe banco. Apenas se a exceção do método consultar for lançada, você deve incluir a conta. Para isso, consulte a conta dentro de um try e o faça a inclusão no catch.
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.PoupancaInvalidaError = exports.ContaInexistenteError5 = exports.ValorInvalidoError3 = exports.SaldoInsuficienteError5 = exports.AplicacaoError5 = exports.Conta9 = exports.Banco7 = exports.ContaPoupanca = void 0;
 class AplicacaoError5 extends Error {
     constructor(message) {
         super(message);
     }
 }
+exports.AplicacaoError5 = AplicacaoError5;
 class PoupancaInvalidaError extends AplicacaoError5 {
     constructor(message) {
         super(message);
     }
 }
+exports.PoupancaInvalidaError = PoupancaInvalidaError;
 class ValorInvalidoError3 extends AplicacaoError5 {
     constructor(message) {
         super(message);
     }
 }
+exports.ValorInvalidoError3 = ValorInvalidoError3;
 class ContaInexistenteError5 extends AplicacaoError5 {
     constructor(message) {
         super(message);
     }
 }
+exports.ContaInexistenteError5 = ContaInexistenteError5;
 class SaldoInsuficienteError5 extends AplicacaoError5 {
     constructor(message) {
         super(message);
     }
 }
+exports.SaldoInsuficienteError5 = SaldoInsuficienteError5;
 class Conta9 {
     constructor(numero, saldoInicial) {
         this.saldo = 0;
@@ -55,6 +62,7 @@ class Conta9 {
         return this.saldo;
     }
 }
+exports.Conta9 = Conta9;
 class ContaPoupanca extends Conta9 {
     constructor(numero, valor) {
         super(numero, valor);
@@ -64,6 +72,7 @@ class ContaPoupanca extends Conta9 {
         this.depositar(juros);
     }
 }
+exports.ContaPoupanca = ContaPoupanca;
 class Banco7 {
     constructor() {
         this.contas = [];
@@ -138,6 +147,7 @@ class Banco7 {
         conta.renderizarJuros();
     }
 }
+exports.Banco7 = Banco7;
 function validarValor2(v) {
     if (v <= 0) {
         throw new ValorInvalidoError3("Valor do depósito deve ser maior que zero");
